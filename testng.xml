@@ -3,7 +3,8 @@
 <suite name="Configuration">
   <test name="Release-0.1">
     <classes>
-      <class name="com.test.EnableLiveAgent"/>
+<!--       <class name="com.test.EnableLiveAgent"/> -->
+      <class name="com.test.CreateGlobalPickList"/>
     </classes>
   </test> 
 </suite> 

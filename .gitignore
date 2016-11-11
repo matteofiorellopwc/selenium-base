@@ -4,3 +4,4 @@
 /salesforce.schema
 /target
 .classpath
+/test-output
