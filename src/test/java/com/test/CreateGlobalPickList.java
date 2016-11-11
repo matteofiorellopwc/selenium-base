@@ -21,8 +21,7 @@ public class CreateGlobalPickList extends AbstractBaseTest {
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("Picklists_font"))).click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.name("new"))).click();
 
-		wait.until(ExpectedConditions.elementToBeClickable(By.name("new"))).click();
-		driver.findElement(By.id("MasterLabel")).clear();
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("MasterLabel"))).clear();
 		driver.findElement(By.id("MasterLabel")).sendKeys("Brand");
 		driver.findElement(By.id("DeveloperName")).clear();
 		driver.findElement(By.id("DeveloperName")).sendKeys("Brand");
