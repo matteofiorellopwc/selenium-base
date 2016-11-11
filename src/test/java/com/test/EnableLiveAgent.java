@@ -20,6 +20,7 @@ public class EnableLiveAgent extends AbstractBaseTest {
 		wait.until(ExpectedConditions
 				.elementToBeClickable(By.id("j_id0:j_id15:thePageBlock:generalSection:generalSectionItem:togglePref")))
 				.click();
+		System.out.println("click save ?!");
 		driver.findElement(By.id("j_id0:j_id15:thePageBlock:j_id25:save")).click();
 		driver.findElement(By.id("j_id0:j_id15:thePageBlock:j_id25:save")).click();
 
