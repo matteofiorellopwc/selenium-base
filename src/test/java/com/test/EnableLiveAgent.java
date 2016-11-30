@@ -17,6 +17,7 @@ public class EnableLiveAgent extends AbstractBaseTest {
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("setupSearch"))).clear();
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("setupSearch"))).sendKeys("live");
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("LiveAgentSettings_font"))).click();
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions
 				.elementToBeClickable(By.id("j_id0:j_id15:thePageBlock:generalSection:generalSectionItem:togglePref")))
 				.click();

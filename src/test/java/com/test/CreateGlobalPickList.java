@@ -20,7 +20,8 @@ public class CreateGlobalPickList extends AbstractBaseTest {
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("setupSearch"))).sendKeys("pick");
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("Picklists_font"))).click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.name("new"))).click();
-
+		wait.until(ExpectedConditions.elementToBeClickable(By.name("new"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.name("new"))).click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("MasterLabel"))).clear();
 		driver.findElement(By.id("MasterLabel")).sendKeys("Brand");
 		driver.findElement(By.id("DeveloperName")).clear();
@@ -31,8 +32,10 @@ public class CreateGlobalPickList extends AbstractBaseTest {
 				"MaxMara\nSportmax\nWeekend MaxMara\nMax&Co.\nMarella\niBlues\nPennyBlack\nMarina Rinaldi\nPersona\nDiffusione Tessile");
 		driver.findElement(By.cssSelector("#bottomButtonRow > input[name=\"save\"]")).click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Back to List"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Back to List"))).click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.name("new"))).click();
-
+		wait.until(ExpectedConditions.elementToBeClickable(By.name("new"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.name("new"))).click();
 		driver.findElement(By.id("MasterLabel")).clear();
 		driver.findElement(By.id("MasterLabel")).sendKeys("Language");
 		driver.findElement(By.id("DeveloperName")).clear();

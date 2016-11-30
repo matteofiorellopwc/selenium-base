@@ -36,6 +36,7 @@ public abstract class AbstractBaseTest {
 	public void setUp() throws Exception {
 		System.setProperty(systemPropertyDriver, systemPropertyDriverPath);
 		driver = new FirefoxDriver();
+		// driver = new HtmlUnitDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
