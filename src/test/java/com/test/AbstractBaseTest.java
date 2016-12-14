@@ -34,6 +34,10 @@ public abstract class AbstractBaseTest {
 
 	@BeforeTest
 	public void setUp() throws Exception {
+		logger.info("Msg #1");
+		logger.warn("Msg #2");
+		logger.error("Msg #3");
+		logger.debug("Msg #4");
 		System.setProperty(systemPropertyDriver, systemPropertyDriverPath);
 		// driver = new FirefoxDriver();
 		// driver = new HtmlUnitDriver();
