@@ -11,6 +11,10 @@
 	<logger name="com.test" level="INFO" additivity="false">
             <appender-ref ref="STDOUT" />
 	</logger>
+	
+	<logger name="com.gargoylesoftware.htmlunit" level="SEVERE" additivity="false">
+            <appender-ref ref="STDOUT" />
+	</logger>
 
 	<!-- By default, the level of the root level is set to DEBUG -->
 	<root level="DEBUG">
