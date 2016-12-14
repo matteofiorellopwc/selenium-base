@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Level;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -40,7 +39,7 @@ public abstract class AbstractBaseTest {
 		logger.error("Msg #3");
 		logger.debug("Msg #4");
 
-		java.util.logging.Logger.getLogger("com.gargoylesoftware.htmlunit").setLevel(Level.OFF);
+		// java.util.logging.Logger.getLogger("com.gargoylesoftware.htmlunit").setLevel(Level.OFF);
 
 		System.setProperty(systemPropertyDriver, systemPropertyDriverPath);
 		// driver = new FirefoxDriver();
