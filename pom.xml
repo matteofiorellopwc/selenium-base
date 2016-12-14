@@ -9,6 +9,21 @@
 		<logback.version>1.1.7</logback.version>
 		<slf4j-api.version>1.7.21</slf4j-api.version>
 	</properties>
+	
+	<profiles>
+		<profile>
+			<id>local</id>
+			<properties>
+				<env>local</env>
+			</properties>
+		</profile>
+		<profile>
+			<id>remote</id>
+			<properties>
+				<env>remote</env>
+			</properties>
+		</profile>
+	</profiles>
 
 	<dependencies>
 		<dependency>
