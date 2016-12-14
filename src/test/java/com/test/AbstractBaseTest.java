@@ -49,7 +49,7 @@ public abstract class AbstractBaseTest {
 		driver.findElement(By.id("username")).clear();
 		driver.findElement(By.id("username")).sendKeys(user);
 		driver.findElement(By.id("Login")).click();
-
+		System.out.println(driver.getPageSource());
 	}
 
 	@AfterTest
