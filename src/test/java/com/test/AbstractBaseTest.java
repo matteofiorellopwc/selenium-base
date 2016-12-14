@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterTest;
@@ -35,8 +35,10 @@ public abstract class AbstractBaseTest {
 	@BeforeTest
 	public void setUp() throws Exception {
 		System.setProperty(systemPropertyDriver, systemPropertyDriverPath);
-		driver = new FirefoxDriver();
+		// driver = new FirefoxDriver();
 		// driver = new HtmlUnitDriver();
+		driver = new HtmlUnitDriver(true);
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
@@ -47,6 +49,7 @@ public abstract class AbstractBaseTest {
 		driver.findElement(By.id("username")).clear();
 		driver.findElement(By.id("username")).sendKeys(user);
 		driver.findElement(By.id("Login")).click();
+
 	}
 
 	@AfterTest

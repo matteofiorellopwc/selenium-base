@@ -10,8 +10,8 @@ public class EnableLiveAgent extends AbstractBaseTest {
 	@Test(groups = { "feauture1" })
 	public void testEnableLiveAgent() throws Exception {
 		super.doLogin();
-		WebDriverWait wait = new WebDriverWait(driver, 10);
 
+		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("userNavLabel"))).click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Setup"))).click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("setupSearch"))).clear();
@@ -21,7 +21,6 @@ public class EnableLiveAgent extends AbstractBaseTest {
 		wait.until(ExpectedConditions
 				.elementToBeClickable(By.id("j_id0:j_id15:thePageBlock:generalSection:generalSectionItem:togglePref")))
 				.click();
-		System.out.println("click save ?!");
 		driver.findElement(By.id("j_id0:j_id15:thePageBlock:j_id25:save")).click();
 		driver.findElement(By.id("j_id0:j_id15:thePageBlock:j_id25:save")).click();
 
