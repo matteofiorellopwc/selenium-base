@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -25,27 +26,24 @@ public abstract class AbstractBaseTest {
 	protected StringBuffer verificationErrors = new StringBuffer();
 	private static Properties prop = null;
 	private static final Logger logger = LoggerFactory.getLogger(AbstractBaseTest.class);
-	private static final String systemPropertyDriver = TestUtils.getProperties()
-			.getProperty("selenium.system.property.driver");
-	private static final String systemPropertyDriverPath = TestUtils.getProperties()
-			.getProperty("selenium.system.property.driver.path");
 	private static final String loginPasswd = TestUtils.getProperties().getProperty("salesforce.user.passwd");
 	private static final String user = TestUtils.getProperties().getProperty("salesforce.user");
+	// private static final String systemPropertyDriver =
+	// TestUtils.getProperties()
+	// .getProperty("selenium.system.property.driver");
+	// private static final String systemPropertyDriverPath =
+	// TestUtils.getProperties()
+	// .getProperty("selenium.system.property.driver.path");
 
 	@BeforeTest
 	public void setUp() throws Exception {
-		logger.info("Msg #1");
-		logger.warn("Msg #2");
-		logger.error("Msg #3");
-		logger.debug("Msg #4");
+		// FIXME: UNDERSTAND WHY LOGBACK + SFL4J DOESN'T INTERCEPT IT USING
+		// LOGBACK-TEST.XML
+		java.util.logging.Logger.getLogger("com.gargoylesoftware.htmlunit").setLevel(Level.OFF);
 
-		// java.util.logging.Logger.getLogger("com.gargoylesoftware.htmlunit").setLevel(Level.OFF);
-
-		System.setProperty(systemPropertyDriver, systemPropertyDriverPath);
+		// System.setProperty(systemPropertyDriver, systemPropertyDriverPath);
 		// driver = new FirefoxDriver();
-		// driver = new HtmlUnitDriver();
 		driver = new HtmlUnitDriver(true);
-
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
